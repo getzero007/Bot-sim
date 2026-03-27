@@ -55,15 +55,18 @@ def search_sheet(keyword):
         reply = ""
         for r in results[:5]:
             reply += (
-                f"📱 SIM: {r['SIM_Number']}\n"
-                f"Serial: {r['Serial']}\n"
-                f"type: {r['Types']}\n"
-                f"📅 วันที่เปิดสัญญาณ: {r['Activation_Date']}\n\n"
+                f"━━━━━━━━━━━━━━\n"
+                f"📱 ข้อมูล SIM\n"
+                f"━━━━━━━━━━━━━━\n"
+                f"🔹 เบอร์: {r['SIM_Number']}\n"
+                f"🧾 Serial: {r['Serial']}\n"
+                f"📦 ประเภท: {r['Types']}\n"
+                f"🗓️ เปิดใช้: {r['Activation_Date']}\n\n"
                 f"📶 สถานะ: {r['SIM_Status']}\n"
-                f"📶 วันที่: {r['SIM_Status_Date']}\n"
-                f"🚗 ทะเบียน: {r['Vehicle_Plate']}\n"
+                f"⏱️ วันที่สถานะ: {r['SIM_Status_Date']}\n"
+                f"🚘 ทะเบียน: {r['Vehicle_Plate']}\n"
                 f"🏢 บริษัท: {r['Company_Name']}\n"
-                
+                f"━━━━━━━━━━━━━━\n\n"
                 
             )
     else:
