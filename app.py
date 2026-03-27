@@ -56,7 +56,7 @@ def search_sheet(keyword):
         for r in results[:5]:
             reply += (
                 f"📱 SIM: {r['SIM_Number']}\n"
-                f"Serial: {r['Serrial']}\n"
+                f"Serial: {r['Serial']}\n"
                 f"type: {r['Types']}\n"
                 f"📅 วันที่เปิดสัญญาณ: {r['Activation_Date']}\n\n"
                 f"📶 สถานะ: {r['SIM_Status']}\n"
