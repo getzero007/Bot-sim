@@ -90,21 +90,15 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    user_text = event.message.text.strip()
+    try:
+        user_text = event.message.text.strip()
 
-    # 🧠 แยก keyword จากข้อความ
-    if user_text.startswith("ค้นหา"):
-        keyword = user_text.replace("ค้นหา", "").strip()
-        reply = search_sheet(keyword)
+        # 🔎 ใช้ข้อความทั้งหมดเป็น keyword เลย
+        reply = search_sheet(user_text)
 
-    else:
-        reply = (
-            "พิมพ์คำว่า:\n"
-            "🔎 ค้นหา <ข้อมูล>\n\n"
-            "ตัวอย่าง:\n"
-            "ค้นหา 70-0773\n"
-            "ค้นหา 6694"
-        )
+    except Exception as e:
+        print("ERROR:", e)
+        reply = "❌ ระบบมีปัญหา"
 
     line_bot_api.reply_message(
         event.reply_token,
