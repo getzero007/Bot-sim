@@ -66,8 +66,7 @@ def search_sheet(keyword):
                 f"⏱️ วันที่สถานะ: {r['SIM_Status_Date']}\n"
                 f"🚘 ทะเบียน: {r['Vehicle_Plate']}\n"
                 f"🏢 บริษัท: {r['Company_Name']}\n"
-                f"━━━━━━━━━━━━━━\n\n"
-                
+                                
             )
     else:
         reply = "❌ ไม่พบข้อมูล"
